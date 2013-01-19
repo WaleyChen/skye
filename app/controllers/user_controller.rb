@@ -7,6 +7,8 @@ class UserController < ApplicationController
   end
 
   def callback
+    session[:pennapps] = 'cool'
+
     @client.authorization.code = params[:code]
     @client.authorization.fetch_access_token!
 
