@@ -59,4 +59,7 @@ MoustacheBurrito::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   root :to => 'application#home'
+  post 'log_in' => 'application#log_in'
+  get 'auth' => 'application#auth', :as => 'auth'
+  get 'signed_in' => 'application#signed_in', :as => 'signed_in'
 end
