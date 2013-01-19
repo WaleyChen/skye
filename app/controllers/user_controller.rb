@@ -74,4 +74,13 @@ class UserController < ApplicationController
       format.json { render :json => response }
     end
   end
+
+  def logout
+    @response = HTTParty.get("https://accounts.google.com/o/oauth2/revoke?token=#{ session[:access_token] }")
+    puts @response
+
+    session.delete(:access_token)
+
+    redirect_to home_url
+  end
 end
