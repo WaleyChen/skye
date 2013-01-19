@@ -4,5 +4,6 @@ class User
   field :email
   field :name
 
+  has_many :calendars
   has_many :tasks
 end

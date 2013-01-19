@@ -3,10 +3,12 @@ class Task
 
   field :name
   field :description
-  field :start
-  field :end
+  field :start_after
+  field :end_before
   field :duration
   field :splittable
+  field :calendar
+  field :email
 
   belongs_to :user
 end
