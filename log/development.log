@@ -9859,3 +9859,1174 @@ Served asset /home.js - 304 Not Modified (0ms)
 
 Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:05:12 -0500
 Served asset /templates/test.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth?code=4/HFTz_8Ihnw-V6_ndT0ifTZ5bALED.EuoeqC4ImyESaDn_6y0ZQNhE4wOieAI" for 127.0.0.1 at 2013-01-18 23:10:58 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/HFTz_8Ihnw-V6_ndT0ifTZ5bALED.EuoeqC4ImyESaDn_6y0ZQNhE4wOieAI"}
+Redirected to http://lvh.me:3000/
+Completed 302 Found in 1330ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 11.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:10:59 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 11.4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:22 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started POST "/log_in" for 127.0.0.1 at 2013-01-18 23:11:23 -0500
+Processing by ApplicationController#log_in as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khs3nk9iJm+YetYZZuwMDKaW6HVreF236rR69tCPDKU=", "commit"=>"Log In"}
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com&redirect_uri=http://lvh.me:3000/auth&response_type=code&scope=https://www.googleapis.com/auth/plus.me
+Completed 302 Found in 168ms
+
+
+Started GET "/auth?code=4/xAIeoyQcPD3sZKsbqLWuyxsUdJTH.wtglQPCMMpMfaDn_6y0ZQNhcwQSieAI" for 127.0.0.1 at 2013-01-18 23:11:26 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/xAIeoyQcPD3sZKsbqLWuyxsUdJTH.wtglQPCMMpMfaDn_6y0ZQNhcwQSieAI"}
+Redirected to http://lvh.me:3000/
+Completed 302 Found in 655ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 11.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:11:27 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 14.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:15 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started POST "/log_in" for 127.0.0.1 at 2013-01-18 23:12:16 -0500
+Processing by ApplicationController#log_in as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khs3nk9iJm+YetYZZuwMDKaW6HVreF236rR69tCPDKU=", "commit"=>"Log In"}
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com&redirect_uri=http://lvh.me:3000/auth&response_type=code&scope=https://www.googleapis.com/auth/plus.me
+Completed 302 Found in 212ms
+
+
+Started GET "/auth?code=4/p9Ec7E1-vo53rJbXJfkYHGEwBLat.EmVWslLnNT0caDn_6y0ZQNgwXQaieAI" for 127.0.0.1 at 2013-01-18 23:12:19 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/p9Ec7E1-vo53rJbXJfkYHGEwBLat.EmVWslLnNT0caDn_6y0ZQNgwXQaieAI"}
+Redirected to http://lvh.me:3000/
+Completed 302 Found in 592ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 11.4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:12:20 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 13.2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:22 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started POST "/log_in" for 127.0.0.1 at 2013-01-18 23:13:23 -0500
+Processing by ApplicationController#log_in as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khs3nk9iJm+YetYZZuwMDKaW6HVreF236rR69tCPDKU=", "commit"=>"Log In"}
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com&redirect_uri=http://lvh.me:3000/auth&response_type=code&scope=https://www.googleapis.com/auth/plus.me
+Completed 302 Found in 539ms
+
+
+Started GET "/auth?code=4/FNEzqdbJSOtO-aQHc90PGY_Ne5qE.IjY7av8A_NUfaDn_6y0ZQNiGnAiieAI" for 127.0.0.1 at 2013-01-18 23:13:33 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/FNEzqdbJSOtO-aQHc90PGY_Ne5qE.IjY7av8A_NUfaDn_6y0ZQNiGnAiieAI"}
+  Rendered application/home.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 995ms (Views: 11.9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:13:34 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started GET "/auth?code=4/FNEzqdbJSOtO-aQHc90PGY_Ne5qE.IjY7av8A_NUfaDn_6y0ZQNiGnAiieAI" for 127.0.0.1 at 2013-01-18 23:14:33 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/FNEzqdbJSOtO-aQHc90PGY_Ne5qE.IjY7av8A_NUfaDn_6y0ZQNiGnAiieAI"}
+Completed 500 Internal Server Error in 742ms
+
+Signet::AuthorizationError (Authorization failed.  Server message:
+{
+  "error" : "invalid_grant"
+}):
+  app/controllers/application_controller.rb:18:in `auth'
+
+
+  Rendered /Users/nikeelevet/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/nikeelevet/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/nikeelevet/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 28ms (Views: 27.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:38 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started POST "/log_in" for 127.0.0.1 at 2013-01-18 23:14:39 -0500
+Processing by ApplicationController#log_in as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khs3nk9iJm+YetYZZuwMDKaW6HVreF236rR69tCPDKU=", "commit"=>"Log In"}
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com&redirect_uri=http://lvh.me:3000/auth&response_type=code&scope=https://www.googleapis.com/auth/plus.me
+Completed 302 Found in 181ms
+
+
+Started GET "/auth?code=4/NQHCeFee89Z0nkpWIgsRFewnvZu5.gkG5kOM7mAsdaDn_6y0ZQNi6uwqieAI" for 127.0.0.1 at 2013-01-18 23:14:42 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/NQHCeFee89Z0nkpWIgsRFewnvZu5.gkG5kOM7mAsdaDn_6y0ZQNi6uwqieAI"}
+  Rendered application/home.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 603ms (Views: 12.9ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:14:43 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started GET "/auth?code=4/NQHCeFee89Z0nkpWIgsRFewnvZu5.gkG5kOM7mAsdaDn_6y0ZQNi6uwqieAI" for 127.0.0.1 at 2013-01-18 23:14:58 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/NQHCeFee89Z0nkpWIgsRFewnvZu5.gkG5kOM7mAsdaDn_6y0ZQNi6uwqieAI"}
+Completed 500 Internal Server Error in 341ms
+
+Signet::AuthorizationError (Authorization failed.  Server message:
+{
+  "error" : "invalid_grant"
+}):
+  app/controllers/application_controller.rb:18:in `auth'
+
+
+  Rendered /Users/nikeelevet/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/nikeelevet/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/nikeelevet/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 24.9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /templates/test.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:01 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started POST "/log_in" for 127.0.0.1 at 2013-01-18 23:15:03 -0500
+Processing by ApplicationController#log_in as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khs3nk9iJm+YetYZZuwMDKaW6HVreF236rR69tCPDKU=", "commit"=>"Log In"}
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com&redirect_uri=http://lvh.me:3000/auth&response_type=code&scope=https://www.googleapis.com/auth/plus.me
+Completed 302 Found in 162ms
+
+
+Started GET "/auth?code=4/WFOHXakadAEfleklN4GDfhlYpIvw.kuSoa-3EpwAeaDn_6y0ZQNi2iQuieAI" for 127.0.0.1 at 2013-01-18 23:15:09 -0500
+Processing by ApplicationController#auth as HTML
+  Parameters: {"code"=>"4/WFOHXakadAEfleklN4GDfhlYpIvw.kuSoa-3EpwAeaDn_6y0ZQNi2iQuieAI"}
+  Rendered application/home.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 924ms (Views: 15.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates/test.js?body=1" for 127.0.0.1 at 2013-01-18 23:15:10 -0500
+Served asset /templates/test.js - 200 OK (0ms)

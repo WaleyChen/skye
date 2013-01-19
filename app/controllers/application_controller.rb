@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   before_filter :set_client, :only => [:log_in, :auth]
 
   def home
-
   end
 
   def log_in
@@ -14,6 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def auth
+    @access_token = params[:code]
     @client.authorization.code = params[:code]
     @client.authorization.fetch_access_token!
 
@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
       :parameters => {'collection' => 'public', 'userId' => 'me'}
     )
 
-    redirect_to home_url
+    render :action => 'home'
   end
 
   def set_client
