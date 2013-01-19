@@ -12,12 +12,11 @@ class UserController < ApplicationController
     @client.authorization.code = params[:code]
     @client.authorization.fetch_access_token!
 
-    redirect_to(home_url)
+    redirect_to home_url
   end
 
   def setup
     @client = Google::APIClient.new
-    @plus = @client.discovered_api('plus')
 
     # Initialize OAuth 2.0 client    
     @client.authorization.client_id = '532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com'
@@ -25,6 +24,6 @@ class UserController < ApplicationController
     @client.authorization.redirect_uri = login_callback_url
 
     # TODO change this to the calendar scope
-    @client.authorization.scope = 'https://www.googleapis.com/auth/plus.me'
+    @client.authorization.scope = 'https://www.googleapis.com/auth/calendar'
   end
 end
