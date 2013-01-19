@@ -12,7 +12,7 @@ class UserController < ApplicationController
     @client.authorization.code = params[:code]
     @client.authorization.fetch_access_token!
 
-    redirect_to(home_url)
+    redirect_to(schedule_url)
   end
 
   def setup
