@@ -34,6 +34,18 @@ it3 = {
   scheduledStart: 0
 }
 
+it4 = {
+  id: 4,
+  name: "4",
+  description: "4",
+  tags: [],
+  startAfter: 1,
+  endBefore: 3,
+  dependencies: [],
+  duration: 1,
+  scheduledStart: 0
+}
+
 //Utilities
 
 var between = function (arg, first, last) {
@@ -122,8 +134,49 @@ var tryInsert = function (scheduled, unscheduled, task) {
 	return;
 }
 
+//Takes a task and either inserts it into the schedule or into unscheduled and returns whether or not is succeeded (where success is putting the task in the schedule)
+var tryInsertWithMovedStart = function (schedule, unscheduled, task) {
+	timePairs = freeTimes(schedule, task.startAfter, task.endBefore);
+	while(timePair = timePairs.pop()) {
+		if (timePair[1] - timePair[0] > task.duration) {
+			task.scheduledStart = timePair[0];
+			schedule.push(task);
+			return true;
+		}
+	}
+	unscheduled.push(task);
+	return false;
+}
 
-tasks = [it1, it2, it3];
+//Takes a task and either returns it if it couldn't be fit, or returns undefined, and puts the task in the schedule (possibly moving events from schedule to unscheduled)
+var tryInsertWithOneMovedEvent = function(schedule, unscheduled, task){
+	for (var i = 0; i < schedule.length; i++) {
+		item = schedule.splice(i, 1);
+		item = item[0];
+		success = tryInsertWithMovedStart(schedule, unscheduled, task);
+		if (success) {
+			unscheduled.push(item);
+			return;
+		} else {
+			schedule.splice(i, 0, item);
+			unscheduled.pop();
+		}
+	}
+	return task;
+}
+
+tasks = [it1, it2, it3, it4];
+tasks.sort(function (left,right) {
+	if (left.duration < right.duration) {
+		return false;
+	} else if (left.duration > right.duration) {
+		return true;
+	} else if (left.endBefore - left.startAfter < right.endBefore - right.startAfter) {
+		return false;
+	} else {
+		return true;
+	}
+});
 unscheduled = []
 unschedulable = [];
 schedule = [];
@@ -145,16 +198,31 @@ unscheduled = [];
 
 //if possible, move a task around to fit it in the graph
 while (task = tasks.pop()) {
-	timePairs = freeTimes(schedule, task.startAfter, task.endBefore);
-	while(timePair = timePairs.pop()) {
-		if (timePair[1] - timePair[0] > task.duration) {
-			task.scheduledStart = timePair[0];
-			schedule.push(task);
-			task = undefined;
-			break;
-		}
-	}
+	tryInsertWithMovedStart(schedule, unscheduled, task);
+}
+
+tasks = unscheduled;
+unscheduled = [];
+
+//try removing singular events to make room for the remaining tasks
+while (task = tasks.pop()) {
+	task = tryInsertWithOneMovedEvent(schedule, unscheduled, task);
 	if (task !== undefined) {
 		unscheduled.push(task);
 	}
 }
+
+tasks = unscheduled;
+unscheduled = [];
+
+//try again to insert with moved start, to put back any that were removed in previous section
+while (task = tasks.pop()) {
+	tryInsertWithMovedStart(schedule, unscheduled, task);
+}
+
+tasks = unscheduled;
+unscheduled = [];
+
+//give up
+unschedulable = unschedulable.concat(tasks);
+tasks = [];
