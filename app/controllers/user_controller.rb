@@ -113,44 +113,44 @@ class UserController < ApplicationController
   end
 
   def set_tasks_from_events
-    cals = Calendar.where(:email => session[:email])
+    # cals = Calendar.where(:email => session[:email])
 
-    cals.each do |cal|
-      cal.events["items"].each do |event|
+    # cals.each do |cal|
+    #   cal.events["items"].each do |event|
 
-        rec = event["recurrence"]
+    #     rec = event["recurrence"]
 
-        if rec.present?
-          puts rec.split(",")
+    #     if rec.present?
+    #       puts rec.split(",")
 
-          rec_freq = rec[0]
+    #       rec_freq = rec[0]
 
-          if rec_freq.include?("DAILY")
-            rec_freq = 1.day
-          elsif rec_freq.include?("WEEKLY")
-            rec_freq = 1.week
-          elsif rec_freq.include?("MONTHLY")
-            rec_freq = 1.month
-          else
-            rec_freq = 1.year
-          end
+    #       if rec_freq.include?("DAILY")
+    #         rec_freq = 1.day
+    #       elsif rec_freq.include?("WEEKLY")
+    #         rec_freq = 1.week
+    #       elsif rec_freq.include?("MONTHLY")
+    #         rec_freq = 1.month
+    #       else
+    #         rec_freq = 1.year
+    #       end
 
-          break if rec_freq.size == 1
-        end
+    #       break if rec_freq.size == 1
+    #     end
 
-        t = Task.new
-        t.name = event["summary"]
-        t.email = session[:email]
+    #     t = Task.new
+    #     t.name = event["summary"]
+    #     t.email = session[:email]
 
-        date_type = event["start"]["date"].nil? ? 'dateTime' : 'date'
+    #     date_type = event["start"]["date"].nil? ? 'dateTime' : 'date'
 
-        t.start_after = Time.parse(event["start"][date_type]).to_i 
-        t.end_before = Time.parse(event["end"][date_type]).to_i
+    #     t.start_after = Time.parse(event["start"][date_type]).to_i 
+    #     t.end_before = Time.parse(event["end"][date_type]).to_i
 
-        t.duration = t.start_after - t.end_before
-        t.save
-      end
-    end
+    #     t.duration = t.start_after - t.end_before
+    #     t.save
+    #   end
+    # end
   end
 
   def logout
