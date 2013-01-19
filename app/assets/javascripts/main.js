@@ -142,6 +142,20 @@ var priority = function (task) {
 	return maxPriority;
 }
 
+var sortBySchedulingDifficulty = function(tasks) {
+	tasks.sort(function (left,right) {
+		if (left.duration < right.duration) {
+			return false;
+		} else if (left.duration > right.duration) {
+			return true;
+		} else if (left.endBefore - left.startAfter < right.endBefore - right.startAfter) {
+			return false;
+		} else {
+			return true;
+		}
+	});
+}
+
 ///////////////////
 //Task related utilities
 ///////////////////
@@ -172,7 +186,7 @@ var makeValid = function (unschedulable, tasks, task) {
 var tryInsertWithMovedStart = function (schedule, unscheduled, task) {
 	timePairs = freeTimes(schedule, task.startAfter, task.endBefore);
 	while(timePair = timePairs.pop()) {
-		if (timePair[1] - timePair[0] > task.duration) {
+		if (timePair[1] - timePair[0] >= task.duration) {
 			task.scheduledStart = timePair[0];
 			schedule.push(task);
 			return true;
@@ -219,17 +233,7 @@ var tryInsertWithBump = function(schedule, unscheduled, task) {
 }
 
 tasks = [it1, it2, it3, it4, it5];
-tasks.sort(function (left,right) {
-	if (left.duration < right.duration) {
-		return false;
-	} else if (left.duration > right.duration) {
-		return true;
-	} else if (left.endBefore - left.startAfter < right.endBefore - right.startAfter) {
-		return false;
-	} else {
-		return true;
-	}
-});
+sortBySchedulingDifficulty(tasks);
 unscheduled = []
 unschedulable = [];
 schedule = [];
@@ -248,6 +252,7 @@ while (task = tasks.pop()) {
 
 tasks = unscheduled;
 unscheduled = [];
+sortBySchedulingDifficulty(tasks);
 
 //try removing singular events to make room for the remaining tasks
 while (task = tasks.pop()) {
@@ -256,6 +261,7 @@ while (task = tasks.pop()) {
 
 tasks = unscheduled;
 unscheduled = [];
+sortBySchedulingDifficulty(tasks);
 
 //try again to insert with moved start, to put back any that were removed in previous section
 while (task = tasks.pop()) {
@@ -264,6 +270,7 @@ while (task = tasks.pop()) {
 
 tasks = unscheduled;
 unscheduled = [];
+sortBySchedulingDifficulty(tasks);
 
 //Move lower priority tasks out of the way.
 while (task = tasks.pop()) {
@@ -272,6 +279,7 @@ while (task = tasks.pop()) {
 
 tasks = unscheduled;
 unscheduled = [];
+sortBySchedulingDifficulty(tasks);
 
 //Put back all the bumped tasks with low priority
 while (task = tasks.pop()) {
@@ -280,6 +288,7 @@ while (task = tasks.pop()) {
 
 tasks = unscheduled;
 unscheduled = [];
+sortBySchedulingDifficulty(tasks);
 
 //Put back all moved tasks from previous
 while (task = tasks.pop()) {
@@ -288,6 +297,7 @@ while (task = tasks.pop()) {
 
 tasks = unscheduled;
 unscheduled = [];
+sortBySchedulingDifficulty(tasks);
 
 //give up
 unschedulable = unschedulable.concat(tasks);
