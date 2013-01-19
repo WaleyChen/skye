@@ -3,14 +3,16 @@ MoustacheBurrito.ScheduleView = Backbone.View.extend({
     this.calendarView = new MoustacheBurrito.CalendarView({
       start: settings.start,
       end: settings.end,
-      scheduleView: this
+      scheduleView: this,
+      tasks: settings.tasks
     });
 
     this.itineraryView = new MoustacheBurrito.ItineraryView({
       start: settings.start,
       end: settings.end,
       tasks: MoustacheBurrito.user.tasks,
-      scheduleView: this
+      scheduleView: this,
+      tasks: settings.tasks
     });
   },
 
@@ -24,7 +26,8 @@ MoustacheBurrito.ScheduleView = Backbone.View.extend({
 
     if (!this.createTaskView) {
       this.createTaskView = new MoustacheBurrito.CreateTaskView({
-        el: this.$el.find('.create-task')
+        el: this.$el.find('.create-task'),
+        scheduleView: this
       });
     }
     this.createTaskView.render();

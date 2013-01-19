@@ -1,88 +1,7 @@
-it1 = {
-  id: 1,
-  name: "1",
-  description: "1",
-  tags: [],
-  startAfter: 0,
-  endBefore: 100,
-  dependencies: [],
-  duration: 1,
-  scheduledStart: 0
-}
+MoustacheBurrito.schedule = function(tasks, tags) {
 
-it2 = {
-  id: 2,
-  name: "2",
-  description: "2",
-  tags: [],
-  startAfter: 0,
-  endBefore: 100,
-  dependencies: [],
-  duration: 1,
-  scheduledStart: 0
-}
-
-it3 = {
-  id: 3,
-  name: "3",
-  description: "3",
-  tags: [],
-  startAfter: 0,
-  endBefore: 100,
-  dependencies: [],
-  duration: 1,
-  scheduledStart: 0
-}
-
-it4 = {
-  id: 4,
-  name: "4",
-  description: "4",
-  tags: [],
-  startAfter: 1,
-  endBefore: 4,
-  dependencies: [],
-  duration: 1,
-  scheduledStart: 0
-}
-
-it5 = {
-  id: 5,
-  name: "5",
-  description: "5",
-  tags: [1],
-  startAfter: 0,
-  endBefore: 3,
-  dependencies: [],
-  duration: 2,
-  scheduledStart: 0
-}
-
-t0 = {
-	id: 0,
-	name: "t0",
-	"priority": 0
-}
-
-t1 = {
-	id: 1,
-	name: "t1",
-	"priority": 1
-}
-
-t2 = {
-	id: 2,
-	name: "t2",
-	"priority": 2
-}
-
-t3 = {
-	id: 3,
-	name: "t3",
-	"priority": 3
-}
-
-var tags = [t0,t1,t2,t3];
+  tasks = _.clone(tasks);
+  tags = _.clone(tags);
 
 //Utilities
 
@@ -232,7 +151,6 @@ var tryInsertWithBump = function(schedule, unscheduled, task) {
 	tryInsertWithOneMovedEvent(schedule, unscheduled, task);
 }
 
-tasks = [it1, it2, it3, it4, it5];
 sortBySchedulingDifficulty(tasks);
 unscheduled = []
 unschedulable = [];
@@ -302,3 +220,96 @@ sortBySchedulingDifficulty(tasks);
 //give up
 unschedulable = unschedulable.concat(tasks);
 tasks = [];
+
+return {scheduled: schedule, unscheduled: unschedulable}
+
+}
+
+it1 = {
+  id: 1,
+  name: "1",
+  description: "1",
+  tags: [],
+  startAfter: 0,
+  endBefore: 100,
+  dependencies: [],
+  duration: 1,
+  scheduledStart: 0
+}
+
+it2 = {
+  id: 2,
+  name: "2",
+  description: "2",
+  tags: [],
+  startAfter: 0,
+  endBefore: 100,
+  dependencies: [],
+  duration: 1,
+  scheduledStart: 0
+}
+
+it3 = {
+  id: 3,
+  name: "3",
+  description: "3",
+  tags: [],
+  startAfter: 0,
+  endBefore: 100,
+  dependencies: [],
+  duration: 1,
+  scheduledStart: 0
+}
+
+it4 = {
+  id: 4,
+  name: "4",
+  description: "4",
+  tags: [],
+  startAfter: 1,
+  endBefore: 4,
+  dependencies: [],
+  duration: 1,
+  scheduledStart: 0
+}
+
+it5 = {
+  id: 5,
+  name: "5",
+  description: "5",
+  tags: [1],
+  startAfter: 0,
+  endBefore: 3,
+  dependencies: [],
+  duration: 2,
+  scheduledStart: 0
+}
+
+t0 = {
+  id: 0,
+  name: "t0",
+  "priority": 0
+}
+
+t1 = {
+  id: 1,
+  name: "t1",
+  "priority": 1
+}
+
+t2 = {
+  id: 2,
+  name: "t2",
+  "priority": 2
+}
+
+t3 = {
+  id: 3,
+  name: "t3",
+  "priority": 3
+}
+
+MoustacheBurrito.seed = {
+  tags: [t0,t1,t2,t3],
+  tasks: [it1, it2, it3, it4, it5]
+}

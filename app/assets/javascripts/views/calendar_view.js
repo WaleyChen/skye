@@ -41,7 +41,8 @@ MoustacheBurrito.CalendarView = Backbone.View.extend({
       this.cells.push($cell); 
       $row.append($cell);
     }
-    this.timeToCell(MoustacheBurrito.time.now()).addClass('today');
+    var $todayCell = this.timeToCell(MoustacheBurrito.time.now());
+    if ($todayCell) $todayCell.addClass('today');
   },
 
   scrollToToday: function() {

@@ -7,7 +7,7 @@ MoustacheBurrito.ItineraryView = Backbone.View.extend({
     this.start = settings.start;
     this.end = settings.end;
     this.scheduleView = settings.scheduleView;
-    this.secPerPixel = 100;
+    this.secPerPixel = MoustacheBurrito.secPerPixel;
 
     var that = this;
     $('.itinerary-wrapper').scroll(function() {

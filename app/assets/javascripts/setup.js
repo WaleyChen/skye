@@ -1,7 +1,3 @@
-var startAfter = new Date(), endBefore = new Date();
-startAfter.setHours(9);
-endBefore.setHours(14);
-
 window.MoustacheBurrito = {
   templates: JST,
   user: {
@@ -12,31 +8,21 @@ window.MoustacheBurrito = {
 $(function(){
   if (!$('body.controller-schedule').length) return;
 
-  MoustacheBurrito.start = MoustacheBurrito.time.now() - MoustacheBurrito.time.days(100);
-  MoustacheBurrito.end = MoustacheBurrito.time.now() + MoustacheBurrito.time.days(100);
+  MoustacheBurrito.start = 0;
+  MoustacheBurrito.end = 20;
+  MoustacheBurrito.secPerPixel = .01;
 
-  MoustacheBurrito.user.tasks = [{
-    id: 0,
-    name: "Sleep",
-    description: "We will all sleep on the 3rd floor of Towne",
-    duration: MoustacheBurrito.time.hours(4),
-    scheduledStart: MoustacheBurrito.time.fromDate(startAfter)
-  }, {
-    id: 1,
-    name: "Hack",
-    description: "Code monkey get up get coffee",
-    duration: MoustacheBurrito.time.hours(4),
-    scheduledStart: MoustacheBurrito.time.fromDate(endBefore)
-  }]
+  var ret = MoustacheBurrito.schedule(MoustacheBurrito.seed.tasks, MoustacheBurrito.seed.tags);
+  MoustacheBurrito.user.tasks = ret.scheduled;
 
   var view = new MoustacheBurrito.ScheduleView({
     el: $('body'),
-    start: MoustacheBurrito.time.now() - MoustacheBurrito.time.days(100),
-    end: MoustacheBurrito.time.now() + MoustacheBurrito.time.days(100)
+    start: MoustacheBurrito.start,
+    end: MoustacheBurrito.end,
+    tasks: MoustacheBurrito.user.tasks
   });
 
   view.render();
-  view.scrollToTime(MoustacheBurrito.time.now());
-  view.calendarView.scrollToTime(MoustacheBurrito.time.now());
-
+  // view.scrollToTime(MoustacheBurrito.time.now());
+  // view.calendarView.scrollToTime(MoustacheBurrito.time.now());
 });
