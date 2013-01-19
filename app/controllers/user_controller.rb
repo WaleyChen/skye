@@ -2,7 +2,7 @@ class UserController < ApplicationController
   include HTTParty
   include JSON
   before_filter :setup, :only => [:login, :callback, :get_cals]
-  before_filter :refresh_token
+  before_filter :refresh_token, :except => [:login, :callback]
 
   def login
     redirect_uri = @client.authorization.authorization_uri
@@ -33,8 +33,9 @@ class UserController < ApplicationController
   end
 
   def refresh_token
-    if session[:issued_at] && session[:expires_in] && session[:issued_at]  + session[:expires_in] * 1.seconds < Time.now
-      redirect_to :action => 'login'
+    if access_token_expired?
+      flash[:notice] = 'Token Expired'
+      redirect_to home_url
     end
   end
 
@@ -54,9 +55,9 @@ class UserController < ApplicationController
     end
   end
 
-  # $.get('get_events?cal_id=oind4tiuh8mitd3q30blhpdl9o@group.calendar.google.com', function(data) {
+  # $.get('get_events?cal_id=waleycz@gmail.com', function(data) {
   #   console.log(data);
-  # });
+  #  });
   def get_events
     cal_id = params[:cal_id]
     max_results = 100
