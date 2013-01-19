@@ -1,5 +1,6 @@
 MoustacheBurrito::Application.routes.draw do
 
+  get 'get_cals' => "user#get_cals"
   get "schedule" => "schedule#index", :as => 'schedule'
   post "login" => "user#login", :as => 'login'
   get "login/callback" => "user#callback", :as => 'login_callback'

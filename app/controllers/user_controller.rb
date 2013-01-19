@@ -1,5 +1,7 @@
 class UserController < ApplicationController
-  before_filter :setup, :only => [:login, :callback]
+  include HTTParty
+  include JSON
+  before_filter :setup, :only => [:login, :callback, :get_cals]
 
   def login
     redirect_uri = @client.authorization.authorization_uri
@@ -8,16 +10,14 @@ class UserController < ApplicationController
 
   def callback
     session[:google_token] = params[:code]
-
     @client.authorization.code = params[:code]
     @client.authorization.fetch_access_token!
-
+    session[:access_token] = @client.authorization.access_token
     redirect_to(schedule_url)
   end
 
   def setup
     @client = Google::APIClient.new
-    @plus = @client.discovered_api('plus')
 
     # Initialize OAuth 2.0 client    
     @client.authorization.client_id = '532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com'
@@ -25,6 +25,14 @@ class UserController < ApplicationController
     @client.authorization.redirect_uri = login_callback_url
 
     # TODO change this to the calendar scope
-    @client.authorization.scope = 'https://www.googleapis.com/auth/plus.me'
+    @client.authorization.scope = 'https://www.googleapis.com/auth/calendar'
+  end
+
+  def get_cals
+    response = HTTParty.get('https://www.googleapis.com/calendar/v3/users/me/calendarList?access_token=' + session[:access_token])
+
+    respond_to do |format|
+      format.json { render :json => response }
+    end
   end
 end
