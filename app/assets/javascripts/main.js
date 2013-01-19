@@ -1,5 +1,5 @@
 it1 = {
-  id: 1
+  id: 1,
   name: "1",
   description: "1",
   tags: [],
@@ -11,42 +11,42 @@ it1 = {
 }
 
 it2 = {
-  id: 2
+  id: 2,
   name: "2",
   description: "2",
   tags: [],
   startAfter: 0,
   endBefore: 100,
   dependencies: [],
-  duration: 1
+  duration: 1,
   scheduledStart: 0
 }
 
-it2 = {
-  id: 3
+it3 = {
+  id: 3,
   name: "3",
   description: "3",
   tags: [],
   startAfter: 0,
   endBefore: 100,
   dependencies: [],
-  duration: 1
+  duration: 1,
   scheduledStart: 0
 }
 
 //Utilities
 
 var between = function (arg, first, last) {
-	return (arg > first && arg < last)
+	return (arg >= first && arg <= last)
 }
 
 var freeTimes = function (schedule, startTime, endTime) {
 	timePairs = [[startTime, endTime]];
 	for (var i = 0; i < schedule.length; i++) {
-		oldTimes = times;
-		times = [];
+		oldTimes = timePairs;
+		timePairs = [];
 		curEvent = schedule[i];
-		for (timePair = oldTimes.pop()) {
+		while (timePair = oldTimes.pop()) {
 			//event is entirely before pair
 			if (curEvent.scheduledStart + curEvent.duration < timePair[0]) {
 				timePairs.push(timePair);
@@ -59,22 +59,22 @@ var freeTimes = function (schedule, startTime, endTime) {
 			}
 			//event is within pair
 			if (curEvent.scheduledStart > timePair[0] && curEvent.scheduledStart + curEvent.duration < timePair[1]) {
-				timePairs.push([timePair[0],curEvent.scheduledStart]);
-				timePairs.push([curEvent.scheduledStart + curEvent.duration, timePair[1]]);
+				timePairs.push([timePair[0],curEvent.scheduledStart - 1]);
+				timePairs.push([curEvent.scheduledStart + curEvent.duration + 1, timePair[1]]);
 				continue;
 			}
 			//event covers start of pair only
-			if (curEvent.scheduledStart < timePair[0] && curEvent.scheduledStart + curEvent.duration < timePair[1]) {
-				timePairs.push([curEvent.scheduledStart + curEvent.duration, timePair[1]]);
+			if (curEvent.scheduledStart <= timePair[0] && curEvent.scheduledStart + curEvent.duration < timePair[1]) {
+				timePairs.push([curEvent.scheduledStart + curEvent.duration + 1, timePair[1]]);
 				continue;
 			}
 			//event covers end of pair only
-			if (curEvent.scheduledStart > timePair[0] && curEvent.scheduledStart + curEvent.duration > timePair[1]) {
+			if (curEvent.scheduledStart > timePair[0] && curEvent.scheduledStart + curEvent.duration >= timePair[1]) {
 				timePairs.push([timePair[0], curEvent.scheduledStart]);
 				continue;
 			}
 			//event completely covers pair
-			if (curEvent.scheduledStart < timePair[0] && curEvent.scheduledStart + curEvent.duration > timePair[1]) {
+			if (curEvent.scheduledStart <= timePair[0] && curEvent.scheduledStart + curEvent.duration >= timePair[1]) {
 				continue;
 			}
 			alert("Strange condition in finding free times (may have things that are equal to each other");
@@ -91,7 +91,7 @@ var freeTimes = function (schedule, startTime, endTime) {
 var interferes = function(task1, task2) {
 	if (between(task1.scheduledStart, task2.scheduledStart, task2.scheduledStart + task2.duration)) {
 		return true;
-	} else if (between(task1.scheduledStart + task1.duration, task2.scheduledStart, task2 + scheduledStart.duration)) {
+	} else if (between(task1.scheduledStart + task1.duration, task2.scheduledStart, task2.scheduledStart + task2.duration)) {
 		return true;
 	}
 	return false;
@@ -131,7 +131,7 @@ schedule = [];
 //make all tasks valid, and moves tasks that can't be made valid to unschedulable
 unscheduled = tasks;
 tasks = [];
-while (task = unscheduled.pop())
+while (task = unscheduled.pop()) {
 	makeValid(unschedulable, tasks, task);
 };
 
@@ -149,7 +149,7 @@ while (task = tasks.pop()) {
 	while(timePair = timePairs.pop()) {
 		if (timePair[1] - timePair[0] > task.duration) {
 			task.scheduledStart = timePair[0];
-			scheduled.push(task);
+			schedule.push(task);
 			task = undefined;
 			break;
 		}
