@@ -17,6 +17,9 @@ class UserController < ApplicationController
     session[:refresh_token] = @client.authorization.refresh_token
     session[:expires_in] = @client.authorization.expires_in
     session[:issued_at] = @client.authorization.issued_at
+
+    u = User.new
+
     redirect_to(schedule_url)
   end
 
@@ -33,6 +36,8 @@ class UserController < ApplicationController
   end
 
   def refresh_token
+    puts session[:access_token]
+
     if access_token_expired?
       flash[:notice] = 'Token Expired'
       redirect_to home_url
