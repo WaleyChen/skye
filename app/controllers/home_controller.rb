@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    puts session
-    puts "home"
+    redirect_to(schedule_url) unless session[:google_token].nil?
   end
 end
