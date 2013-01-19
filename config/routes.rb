@@ -1,5 +1,5 @@
 MoustacheBurrito::Application.routes.draw do
-
+  get 'get_events' => "user#get_events"
   get 'get_cals' => "user#get_cals"
   get "schedule" => "schedule#index", :as => 'schedule'
   post "login" => "user#login", :as => 'login'
