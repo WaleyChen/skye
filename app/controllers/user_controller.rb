@@ -7,7 +7,7 @@ class UserController < ApplicationController
   end
 
   def callback
-    session[:pennapps] = 'cool'
+    session[:google_token] = params[:code]
 
     @client.authorization.code = params[:code]
     @client.authorization.fetch_access_token!
