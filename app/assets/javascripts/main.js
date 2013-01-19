@@ -168,19 +168,6 @@ var makeValid = function (unschedulable, tasks, task) {
 	tasks.push(task);
 }
 
-//Takes a task and either inserts it into the schedule or into unscheduled.
-var tryInsert = function (scheduled, unscheduled, task) {
-	for (var i = 0; i < schedule.length; i++) {
-		curEvent = scheduled[i];
-		if (interferes(task, curEvent)) {
-			unscheduled.push(task);
-			return;
-		}
-	}
-	scheduled.push(task);
-	return;
-}
-
 //Takes a task and either inserts it into the schedule or into unscheduled and returns whether or not is succeeded (where success is putting the task in the schedule)
 var tryInsertWithMovedStart = function (schedule, unscheduled, task) {
 	timePairs = freeTimes(schedule, task.startAfter, task.endBefore);
@@ -253,14 +240,6 @@ tasks = [];
 while (task = unscheduled.pop()) {
 	makeValid(unschedulable, tasks, task);
 };
-
-//insert into schedule niavely (make no attempt to account for properties of task and insert tasks in the order they appear if there is room)
-while (task = tasks.pop()) {
-	tryInsert(schedule, unscheduled, task);
-};
-
-tasks = unscheduled;
-unscheduled = [];
 
 //if possible, move a task around to fit it in the graph
 while (task = tasks.pop()) {
