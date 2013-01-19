@@ -26,6 +26,8 @@ group :development do
 end
 
 gem 'google-api-client', :require => 'google/api_client'
+gem "httparty", :require => 'httparty'
+gem 'json', :require => 'json'
 
 # ----- Views ---------------------------------------------------------------
 gem 'sass-rails',   '~> 3.2.3'
