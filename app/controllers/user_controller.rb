@@ -1,7 +1,6 @@
 class UserController < ApplicationController
   include HTTParty
   include JSON
-  include URI
   before_filter :setup, :only => [:login, :callback, :get_cals]
   before_filter :refresh_token
 
@@ -34,7 +33,7 @@ class UserController < ApplicationController
   end
 
   def refresh_token
-    if session[:issued_at]  + session[:expires_in] * 1.seconds < Time.now
+    if session[:issued_at] && session[:expires_in] && session[:issued_at]  + session[:expires_in] * 1.seconds < Time.now
       redirect_to :action => 'login'
     end
   end
@@ -61,8 +60,8 @@ class UserController < ApplicationController
   def get_events
     cal_id = params[:cal_id]
     max_results = 100
-    t = URI.escape(Time.now.to_s)
-    puts t
+    # 2012-07-12T09:30:00.0z
+    t = Time.now.strftime("%Y-%m-%d") + "T00:00:00Z"
     response = HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/#{ cal_id }/events?access_token=#{ session[:access_token] }&maxResults=#{ max_results }&timeMin=#{ t }")
 
     respond_to do |format|
