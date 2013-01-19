@@ -28,6 +28,10 @@ end
 gem 'google-api-client', :require => 'google/api_client'
 gem "httparty", :require => 'httparty'
 gem 'json', :require => 'json'
+<<<<<<< HEAD
+=======
+# gem 'ri_cal', :require => 'ri_cal'
+>>>>>>> 81d6b005cf714ba3cabad1ced33db919349111ee
 
 # ----- Views ---------------------------------------------------------------
 gem 'sass-rails',   '~> 3.2.3'
