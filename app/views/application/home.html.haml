@@ -1,6 +1,9 @@
 #home
-  = form_tag "/log_in" do
-    = submit_tag "Log In"
+  - if @access_token.nil?
+    = form_tag "/log_in" do
+      = submit_tag "Log In"
+  - else
+    = @access_token
 
   - content_for :javascript do
     :javascript
