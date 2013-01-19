@@ -1,4 +1,11 @@
 MoustacheBurrito::Application.routes.draw do
+
+  post "login" => "user#login"
+  get "login/callback" => "user#callback", :as => 'callback'
+  post "logout" => "user#logout"
+
+  root :to => 'home#index', :as => 'home'
+
   # root :to => "home#index"
 
   # The priority is based upon order of creation:
@@ -57,9 +64,4 @@ MoustacheBurrito::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-
-  root :to => 'application#home', :as => 'home'
-  post 'log_in' => 'application#log_in'
-  get 'auth' => 'application#auth', :as => 'auth'
-  get 'signed_in' => 'application#signed_in', :as => 'signed_in'
 end

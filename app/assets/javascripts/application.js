@@ -15,6 +15,12 @@
 //= require twitter/bootstrap
 //= require_tree .
 
-$(function() {
-  $('h1').after(JST['templates/test']({planet: "world"}));
-});
+jQuery ->
+  $("a[rel=popover]").popover()
+  $(".tooltip").tooltip()
+  $("a[rel=tooltip]").tooltip()
+
+window.Persnickety = {
+  templates: JST,
+  user: {}
+};
