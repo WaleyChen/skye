@@ -20,7 +20,7 @@ class UserController < ApplicationController
     # Initialize OAuth 2.0 client    
     @client.authorization.client_id = '532794372708-m1q8o7d4m2dtrpa9muq8k43no0kvdjok.apps.googleusercontent.com'
     @client.authorization.client_secret = 'fja8IGoJr3Bbg-cIp3ZUN9cj'
-    @client.authorization.redirect_uri = callback_url
+    @client.authorization.redirect_uri = login_callback_url
 
     # TODO change this to the calendar scope
     @client.authorization.scope = 'https://www.googleapis.com/auth/plus.me'

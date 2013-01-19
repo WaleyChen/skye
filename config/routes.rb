@@ -1,8 +1,8 @@
 MoustacheBurrito::Application.routes.draw do
 
-  post "login" => "user#login"
-  get "login/callback" => "user#callback", :as => 'callback'
-  post "logout" => "user#logout"
+  post "login" => "user#login", :as => 'login'
+  get "login/callback" => "user#callback", :as => 'login_callback'
+  post "logout" => "user#logout", :as => 'logout'
 
   root :to => 'home#index', :as => 'home'
 
