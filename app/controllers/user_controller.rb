@@ -17,6 +17,9 @@ class UserController < ApplicationController
     session[:refresh_token] = @client.authorization.refresh_token
     session[:expires_in] = @client.authorization.expires_in
     session[:issued_at] = @client.authorization.issued_at
+
+    u = User.new
+
     redirect_to(schedule_url)
   end
 
@@ -33,6 +36,8 @@ class UserController < ApplicationController
   end
 
   def refresh_token
+    puts session[:access_token]
+
     if access_token_expired?
       flash[:notice] = 'Token Expired'
       redirect_to home_url
@@ -68,5 +73,14 @@ class UserController < ApplicationController
     respond_to do |format|
       format.json { render :json => response }
     end
+  end
+
+  def logout
+    @response = HTTParty.get("https://accounts.google.com/o/oauth2/revoke?token=#{ session[:access_token] }")
+    puts @response
+
+    session.delete(:access_token)
+
+    redirect_to home_url
   end
 end
