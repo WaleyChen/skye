@@ -34,7 +34,7 @@ class UserController < ApplicationController
   end
 
   def refresh_token
-    if session[:issued_at]  + session[:expires_in] * 1.seconds < Time.now
+    if session[:access_token] && session[:issued_at] + session[:expires_in] * 1.seconds < Time.now
       redirect_to :action => 'login'
     end
   end

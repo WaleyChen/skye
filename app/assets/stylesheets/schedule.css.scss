@@ -1,3 +1,98 @@
 // Place all the styles related to the schedule controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$background: #f0f0f0;
+$even-weekday: #ffffff;
+$odd-weekday: #f8f8f8;
+$even-weekend: #f3f3f3;
+$odd-weekend: $even-weekend;
+
+body.controller-schedule {
+  
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .calendar-wrapper, .itinerary-wrapper {
+    height: 500px;
+    overflow: hidden;
+    padding-right: 12px; // Leave room for scrollbar
+  }
+
+  .itinerary-wrapper {
+    overflow: scroll;
+  }
+
+  .calendar {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    color: #aaa;
+    background-color: $background;
+    border-collapse:collapse;
+
+    &::-webkit-scrollbar { 
+      display: none; 
+    }
+
+    td {
+      padding: 4px;
+      cursor: pointer;
+      border: 2px solid $background;
+      -webkit-border-radius: 8px;
+      background-color: #fff;
+      margin: 3px;
+      -webkit-transition: background-color .1s, color .1s;
+
+      &.today {
+        font-weight: bold;
+      }
+
+      &.active {
+        background-color: lighten(#006dcc, 8) !important;
+        color: #eee;
+        &:hover {
+          background-color: lighten(#006dcc, 5) !important;
+          color: #fff !important;
+        }
+      }
+
+      &.month-even {
+        background-color: $even-weekday;
+        &.weekend { background-color: $even-weekend; }
+        &:hover {
+          color: #888;
+          background-color: #e0e0e0;
+        }
+      }
+
+      &.month-odd {
+        background-color: $odd-weekday;
+        &.weekend { background-color: $odd-weekend; }
+        &:hover {
+          color: #333;
+          background-color: #e0e0e0;
+        }
+      }
+    }
+  }
+
+  .itinerary {
+    position: relative;
+  }
+
+  .itinerary-task {
+    position: absolute;
+    background-color: #eee;
+    width: 100%;
+  }
+
+  .create-task {
+
+    input[type=submit] {
+      display: block;
+    }
+  }
+
+}
