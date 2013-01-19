@@ -10,13 +10,9 @@ class UserController < ApplicationController
 
   def callback
     session[:google_token] = params[:code]
-
     @client.authorization.code = params[:code]
     @client.authorization.fetch_access_token!
     session[:access_token] = @client.authorization.access_token
-
-    get_calendars
-
     redirect_to(schedule_url)
   end
 
