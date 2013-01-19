@@ -28,10 +28,6 @@ end
 gem 'google-api-client', :require => 'google/api_client'
 
 # ----- Views ---------------------------------------------------------------
-gem "twitter-bootstrap-rails"
-gem "less-rails"
-gem 'haml'
-gem 'haml-rails'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'jquery-rails'
