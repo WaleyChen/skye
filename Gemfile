@@ -25,6 +25,8 @@ group :development do
   gem 'debugger'
 end
 
+gem 'google-api-client', :require => 'google/api_client'
+
 # ----- Views ---------------------------------------------------------------
 gem "twitter-bootstrap-rails"
 gem "less-rails"
