@@ -42,7 +42,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-    ejs (1.1.1)
     columnize (0.3.6)
     commonjs (0.2.6)
     debugger (1.2.3)
@@ -52,6 +51,7 @@ GEM
     debugger-linecache (1.1.2)
       debugger-ruby_core_source (>= 1.1.1)
     debugger-ruby_core_source (1.1.6)
+    ejs (1.1.1)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -170,8 +170,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  ejs
   debugger
+  ejs
   google-api-client
   haml
   haml-rails

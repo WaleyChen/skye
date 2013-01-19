@@ -1,5 +1,5 @@
 MoustacheBurrito::Application.routes.draw do
-  root :to => "home#index"
+  # root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,7 +58,7 @@ MoustacheBurrito::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  root :to => 'application#home'
+  root :to => 'application#home', :as => 'home'
   post 'log_in' => 'application#log_in'
   get 'auth' => 'application#auth', :as => 'auth'
   get 'signed_in' => 'application#signed_in', :as => 'signed_in'

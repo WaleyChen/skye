@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
       :parameters => {'collection' => 'public', 'userId' => 'me'}
     )
 
-    puts result.data
+    redirect_to home_url
   end
 
   def set_client
