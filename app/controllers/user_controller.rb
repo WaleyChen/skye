@@ -53,8 +53,6 @@ class UserController < ApplicationController
   end
 
   def refresh_token
-    puts session[:access_token]
-
     if access_token_expired?
       flash[:notice] = 'Token Expired'
       redirect_to home_url
