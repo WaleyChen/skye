@@ -9,9 +9,9 @@ window.MoustacheBurrito = {
 $(function(){
   if (!$('body.controller-schedule').length) return;
 
-  MoustacheBurrito.start = MoustacheBurrito.time.now() - MoustacheBurrito.time.days(20);
+  MoustacheBurrito.start = MoustacheBurrito.time.now() - MoustacheBurrito.time.days(30);
   MoustacheBurrito.end = MoustacheBurrito.time.now() + MoustacheBurrito.time.days(100);
-  MoustacheBurrito.secPerPixel = 100;
+  MoustacheBurrito.secPerPixel = 125;
 
   $.get("/get_tasks?email=" + MoustacheBurrito.userid, function (data) {
     MoustacheBurrito.user.tasks = MoustacheBurrito.schedule(MoustacheBurrito.user.tasks.concat(data), MoustacheBurrito.user.tags).scheduled;
