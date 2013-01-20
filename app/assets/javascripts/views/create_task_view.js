@@ -20,10 +20,10 @@ MoustacheBurrito.CreateTaskView = Backbone.View.extend({
     task.duration = parseInt(task.duration || MoustacheBurrito.time.hours(1));
     
     MoustacheBurrito.user.tasks.push(task);
-    var result = MoustacheBurrito.schedule(_.clone(MoustacheBurrito.user.tasks));
+    var result = MoustacheBurrito.schedule(MoustacheBurrito.user.tasks);
     MoustacheBurrito.user.tasks = result.scheduled;
 
-    this.scheduleView.itineraryView.renderTasks();
+    this.scheduleView.itineraryView.renderTasks(MoustacheBurrito.user.tasks);
 
     event.preventDefault();
   }
