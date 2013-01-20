@@ -80,6 +80,18 @@ body.controller-schedule {
 
   .itinerary {
     position: relative;
+    border-left: 3px #e7e7e7 solid;
+    border-right: 3px #e7e7e7 solid;
+    overflow-x: hidden;
+  }
+
+  .day-label {
+    position: absolute;
+    font-size: 40px;
+    border-top: 2px #e7e7e7 dashed;
+    color: #e7e7e7;
+    width: 100%;
+    padding: 17px 12px;
   }
 
   .itinerary-task {
