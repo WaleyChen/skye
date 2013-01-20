@@ -9,6 +9,8 @@ class Task
   field :splittable
   field :calendar
   field :email
+  field :event_id
+  field :head_id
 
   belongs_to :user
 end

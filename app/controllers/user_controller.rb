@@ -101,6 +101,7 @@ class UserController < ApplicationController
       c = Calendar.new
       response = HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/#{ cal_id }/events?access_token=#{ session[:access_token] }&maxResults=#{ max_results }&timeMin=#{ t }")
       @response << response
+      c.api_id = cal_id
       c.events = response
       c.email = u.email
       c.user = u
@@ -111,44 +112,43 @@ class UserController < ApplicationController
   end
 
   def set_tasks_from_events
-    # cals = Calendar.where(:email => session[:email])
+    cals = Calendar.where(:email => session[:email])
 
-    # cals.each do |cal|
-    #   cal.events["items"].each do |event|
+    cals.each do |cal|
+      cal.events["items"].each do |event|
+        rec = event["recurrence"]
+        
+        if rec.nil?
+          create_task_from_event(event, nil)
+        else
+          @response = HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/#{ cal.api_id }/events/#{ event['id'] }/instances?access_token=#{ session[:access_token] }")
+          
+          head_id = @response["items"].first["id"]
 
-    #     rec = event["recurrence"]
+          @response["items"].each_with_index do |event, index|
+            break if index > 20
+            create_task_from_event(event, head_id)
+          end
+        end
 
-    #     if rec.present?
-    #       puts rec.split(",")
+      end
+    end
+  end
 
-    #       rec_freq = rec[0]
+  def create_task_from_event(event, head_id)
+    t = Task.new
+    t.name = event["summary"]
+    t.email = session[:email]
 
-    #       if rec_freq.include?("DAILY")
-    #         rec_freq = 1.day
-    #       elsif rec_freq.include?("WEEKLY")
-    #         rec_freq = 1.week
-    #       elsif rec_freq.include?("MONTHLY")
-    #         rec_freq = 1.month
-    #       else
-    #         rec_freq = 1.year
-    #       end
+    date_type = event["start"]["date"].nil? ? 'dateTime' : 'date'
 
-    #       break if rec_freq.size == 1
-    #     end
+    t.start_after = Time.parse(event["start"][date_type]).to_i 
+    t.end_before = Time.parse(event["end"][date_type]).to_i
+    t.event_id = event['id']
+    t.head_id = head_id
 
-    #     t = Task.new
-    #     t.name = event["summary"]
-    #     t.email = session[:email]
-
-    #     date_type = event["start"]["date"].nil? ? 'dateTime' : 'date'
-
-    #     t.start_after = Time.parse(event["start"][date_type]).to_i 
-    #     t.end_before = Time.parse(event["end"][date_type]).to_i
-
-    #     t.duration = t.start_after - t.end_before
-    #     t.save
-    #   end
-    # end
+    t.duration = t.end_before - t.start_after
+    t.save
   end
 
   def logout
