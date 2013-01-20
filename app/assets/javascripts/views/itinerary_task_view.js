@@ -8,7 +8,7 @@ MoustacheBurrito.ItineraryTaskView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(this.task.name);
+    this.$el.html("<strong>"+this.task.name+"</strong>"+this.task.description);
     this.$el.css({
       top: this.itineraryView.timeToScrollTop(this.task.scheduledStart),
       height: this.task.duration / this.itineraryView.secPerPixel

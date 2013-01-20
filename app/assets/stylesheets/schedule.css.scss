@@ -84,8 +84,19 @@ body.controller-schedule {
 
   .itinerary-task {
     position: absolute;
-    background-color: #eee;
+    background-color: #f2f2f2;
     width: 100%;
+    -webkit-border-radius: 5px;
+    padding: 6px 15px;
+    box-sizing: border-box;
+    border: solid 2px #fff;
+    color: #aaa;
+
+    strong {
+      font-weight: bold;
+      margin-right: 6px;
+      color: #333;
+    }
   }
 
   .create-task {
