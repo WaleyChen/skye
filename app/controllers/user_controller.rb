@@ -155,12 +155,12 @@ class UserController < ApplicationController
     return false if event["start"].nil?
     date_type = event["start"]["date"].nil? ? 'dateTime' : 'date'
 
-    t.start_after = Time.parse(event["start"][date_type]).to_i 
-    t.end_before = Time.parse(event["end"][date_type]).to_i
+    t.startAfter = Time.parse(event["start"][date_type]).to_i
+    t.endBefore = Time.parse(event["end"][date_type]).to_i
     t.event_id = event['id']
     t.head_id = head_id
 
-    t.duration = t.end_before - t.start_after
+    t.duration = t.endBefore - t.startAfter - 1
     t.save
   end
 

@@ -54,6 +54,9 @@ var freeTimes = function (schedule, startTime, endTime) {
 
 var priority = function (task) {
 	maxPriority = 0;
+	if (task.tags === undefined) {
+		task.tags = [];
+	}
 	for (var i = 0; i < task.tags.length; i++) {
 		tag = task.tags[i];
 		maxPriority = Math.max(maxPriority, tags[tag].priority);
@@ -95,7 +98,7 @@ var makeValid = function (unschedulable, tasks, task) {
 		unschedulable.push(task);
 		return;
 	}
-	if (task.scheduledStart < task.startAfter || task.scheduledStart + task.duration > task.endBefore) {
+	if (task.scheduledStart < task.startAfter || task.scheduledStart + task.duration > task.endBefore || task.scheduledStart === undefined) {
 		task.scheduledStart = task.startAfter;
 	}
 	tasks.push(task);
