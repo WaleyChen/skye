@@ -1,1 +1,39 @@
-LOADING...
+<div class="container" id="schedule">
+  <div class="row">
+    <div class="span12">
+      <h1>Skye Loves You</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span3">
+      <div class="calendar-wrapper">
+      </div>
+    </div>
+    <div class="span5">
+      <div class="itinerary-wrapper">
+      </div>
+    </div>
+    <div class="span4 create-task">
+      <form class="form">
+        <label>Name</label>
+        <input type="text" name="name">
+
+        <label>Duration</label>
+        <input type="text" name="duration" value="3600">
+
+        <label>Description</label>
+        <textarea name="description"></textarea>
+
+        <label>Due</label>
+        <input type="date" name="endBefore" value="2013-01-22">
+
+        <input type="submit" class="btn btn-primary" value="Create">
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+MoustacheBurrito.userid = <%= session[:email].to_json.html_safe %>;
+</script>

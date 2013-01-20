@@ -17,8 +17,6 @@ MoustacheBurrito.ScheduleView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(MoustacheBurrito.templates['templates/schedule']());
-
     this.calendarView.render();
     this.itineraryView.render();
     this.$el.find('.calendar-wrapper').append(this.calendarView.el);
