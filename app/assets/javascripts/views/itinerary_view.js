@@ -47,12 +47,13 @@ MoustacheBurrito.ItineraryView = Backbone.View.extend({
     _.each(tasks, function(task) {
       var view = new MoustacheBurrito.ItineraryTaskView({task: task, itineraryView: this});
       view.render();
+      task.view = view;
       this.$el.append(view.el);
     }, this);
   },
 
-  scrollToTime: function(time) {
-    this.$el.parent().animate({scrollTop: this.timeToScrollTop(time)});
+  scrollToTime: function(time, callback) {
+    this.$el.parent().animate({scrollTop: this.timeToScrollTop(time)}, callback);
   },
 
   onScroll: function() {

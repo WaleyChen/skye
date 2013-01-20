@@ -13,5 +13,9 @@ MoustacheBurrito.ItineraryTaskView = Backbone.View.extend({
       top: this.itineraryView.timeToScrollTop(this.task.scheduledStart),
       height: this.task.duration / this.itineraryView.secPerPixel
     })
+  },
+
+  highlight: function() {
+    this.$el.animate({backgroundColor: 'yellow'});
   }
 });

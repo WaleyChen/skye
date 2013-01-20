@@ -33,7 +33,7 @@ MoustacheBurrito.ScheduleView = Backbone.View.extend({
     this.$el.append();
   },
 
-  scrollToTime: function(time, animate) {
-    this.itineraryView.scrollToTime(time, animate);
+  scrollToTime: function(time, callback) {
+    this.itineraryView.scrollToTime(time, callback);
   }
 });
