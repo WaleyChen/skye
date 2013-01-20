@@ -140,6 +140,7 @@ class UserController < ApplicationController
     t.name = event["summary"]
     t.email = session[:email]
 
+    return false if event["start"].nil?
     date_type = event["start"]["date"].nil? ? 'dateTime' : 'date'
 
     t.start_after = Time.parse(event["start"][date_type]).to_i 
