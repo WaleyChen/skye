@@ -3,6 +3,7 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
+//= require main
 //= require_tree ./templates
 //= require setup
 //= require_tree .
