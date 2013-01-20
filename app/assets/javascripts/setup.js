@@ -2,12 +2,26 @@ window.MoustacheBurrito = {
   templates: JST,
   user: {
     tasks: [],
-    tags: []
+    tags: [{
+      id: 0,
+      name: 'sleep',
+      priority: 2
+    }, {
+      id: 1,
+      name: 'school',
+      priority: 1
+    }]
   }
 };
 
 $(function(){
   if (!$('body.controller-schedule').length) return;
+
+  $('[name=tags]').tagsManager({
+    preventSubmitOnEnter: true,
+    typeahead: true,
+    typeaheadSource: function() { return _.pluck(MoustacheBurrito.user.tags, 'name'); }
+  });
 
   MoustacheBurrito.start = MoustacheBurrito.time.now() - MoustacheBurrito.time.days(30);
   MoustacheBurrito.end = MoustacheBurrito.time.now() + MoustacheBurrito.time.days(100);
