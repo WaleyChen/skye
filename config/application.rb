@@ -63,6 +63,11 @@ module MoustacheBurrito
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+      config.assets.version = '1.0'# Do not compress assets
+      config.assets.compress = false
+      
+      # Expands the lines which load the assets
+      config.assets.debug = true
+
   end
 end

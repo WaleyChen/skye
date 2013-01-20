@@ -24,6 +24,7 @@ $(function(){
     });
 
     view.render();
+    view.itineraryView.renderTasks(MoustacheBurrito.user.tasks);
     view.scrollToTime(MoustacheBurrito.time.now());
     view.calendarView.scrollToTime(MoustacheBurrito.time.now());
   });
