@@ -3,8 +3,8 @@ MoustacheBurrito.time = {
     return date.getTime() / 1000;
   },
 
-  from: function(year, month, day, hour, min, sec, ms) {
-    return new Date(year, month, day, hour, min, sec, ms).getTime() / 1000;
+  from: function(year, month, day) {
+    return new Date(year, month, day).getTime() / 1000;
   },
 
   toDate: function(time) {

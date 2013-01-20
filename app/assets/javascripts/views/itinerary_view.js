@@ -21,15 +21,21 @@ MoustacheBurrito.ItineraryView = Backbone.View.extend({
       height: this.timeToScrollTop(this.end)
     });
 
-    _.each(this.tasks, function(task) {
+    this.renderTasks(this.tasks);
+
+    $('.itinerary-wrapper').scroll(this.onScroll.bind(this));
+
+  },
+
+  renderTasks: function(tasks) {
+    _.each(this.taskViews || [], function(taskView) { taskView.remove(); });
+    this.taskViews = [];
+
+    _.each(tasks, function(task) {
       var view = new MoustacheBurrito.ItineraryTaskView({task: task, itineraryView: this});
       view.render();
       this.$el.append(view.el);
     }, this);
-
-    var that = this;
-    $('.itinerary-wrapper').scroll(function() { that.onScroll(); });
-
   },
 
   scrollToTime: function(time) {

@@ -1,18 +1,19 @@
 window.MoustacheBurrito = {
   templates: JST,
   user: {
-    tasks: []
+    tasks: [],
+    tags: []
   }
 };
 
 $(function(){
   if (!$('body.controller-schedule').length) return;
 
-  MoustacheBurrito.start = 0;
-  MoustacheBurrito.end = 20;
-  MoustacheBurrito.secPerPixel = .01;
+  MoustacheBurrito.start = MoustacheBurrito.time.now() - MoustacheBurrito.time.days(20);
+  MoustacheBurrito.end = MoustacheBurrito.time.now() + MoustacheBurrito.time.days(100);
+  MoustacheBurrito.secPerPixel = 100;
 
-  var ret = MoustacheBurrito.schedule(MoustacheBurrito.seed.tasks, MoustacheBurrito.seed.tags);
+  var ret = MoustacheBurrito.schedule(MoustacheBurrito.user.tasks, MoustacheBurrito.user.tags);
   MoustacheBurrito.user.tasks = ret.scheduled;
 
   var view = new MoustacheBurrito.ScheduleView({
@@ -23,6 +24,6 @@ $(function(){
   });
 
   view.render();
-  // view.scrollToTime(MoustacheBurrito.time.now());
-  // view.calendarView.scrollToTime(MoustacheBurrito.time.now());
+  view.scrollToTime(MoustacheBurrito.time.now());
+  view.calendarView.scrollToTime(MoustacheBurrito.time.now());
 });

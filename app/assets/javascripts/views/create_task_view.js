@@ -7,16 +7,23 @@ MoustacheBurrito.CreateTaskView = Backbone.View.extend({
 
   onSubmit: function(event) {
     var task = {};
-    _.each(['name', 'description', 'endBefore', 'tags'], function(field) {
+    _.each(['name', 'description', 'duration', 'tags'], function(field) {
       task[field] = $('[name='+field+']').val();
     });
-    task['endBefore'] = Date.parse(task['endBefore'])/1000;
+    if ($('[name=endBefore]').val()) {
+      var date = $('[name=endBefore]').val().split('-');
+      task.endBefore = MoustacheBurrito.time.from(parseInt(date[0]), parseInt(date[1]), parseInt(date[2]));
+    } else {
+      task.endBefore = Math.floor(MoustacheBurrito.time.now() + MoustacheBurrito.time.days(365));
+    }
+    task.startAfter = Math.floor(MoustacheBurrito.time.now());
+    task.duration = parseInt(task.duration || MoustacheBurrito.time.hours(1));
     
     MoustacheBurrito.user.tasks.push(task);
-    var result = MoustacheBurrito.schedule(_.clone(MoustacheBurrito.user.tasks));
+    var result = MoustacheBurrito.schedule(MoustacheBurrito.user.tasks);
     MoustacheBurrito.user.tasks = result.scheduled;
 
-    this.scheduleView.render();
+    this.scheduleView.itineraryView.renderTasks(MoustacheBurrito.user.tasks);
 
     event.preventDefault();
   }
