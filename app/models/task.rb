@@ -3,8 +3,8 @@ class Task
 
   field :name
   field :description
-  field :start_after
-  field :end_before
+  field :startAfter
+  field :endBefore
   field :duration
   field :splittable
   field :calendar
