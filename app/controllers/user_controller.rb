@@ -59,6 +59,18 @@ class UserController < ApplicationController
     end
   end
 
+  # $.get('get_tasks?cal_id=waleycz@gmail.com', function(data) {
+  #   console.log(data);
+  #  });
+  def get_tasks
+    email = params[:email]
+    json = Task.where(:email => email).all.to_json
+
+    respond_to do |format|
+      format.json { render :json => json }
+    end
+  end
+
   # $.get('get_cals', function(data) {
   #   console.log(data);
   # });
