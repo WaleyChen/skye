@@ -12,7 +12,7 @@ MoustacheBurrito.CreateTaskView = Backbone.View.extend({
     });
     if ($('[name=endBefore]').val()) {
       var date = $('[name=endBefore]').val().split('-');
-      task.endBefore = MoustacheBurrito.time.from(parseInt(date[0]), parseInt(date[1]), parseInt(date[2]));
+      task.endBefore = MoustacheBurrito.time.from(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
       task.tags = _.map(_.compact($('[name=hidden-tags]').val().split(',')), function(name) {
         return _.find(MoustacheBurrito.user.tags, function(tag) { return tag.name == name }).id
       });
@@ -23,7 +23,7 @@ MoustacheBurrito.CreateTaskView = Backbone.View.extend({
     task.duration = parseInt(task.duration || MoustacheBurrito.time.hours(1));
     
     MoustacheBurrito.user.tasks.push(task);
-    var result = MoustacheBurrito.schedule(MoustacheBurrito.user.tasks);
+    var result = MoustacheBurrito.schedule(MoustacheBurrito.user.tasks, MoustacheBurrito.user.tags);
     MoustacheBurrito.user.tasks = result.scheduled;
 
     this.scheduleView.itineraryView.renderTasks(MoustacheBurrito.user.tasks);

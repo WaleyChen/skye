@@ -107,6 +107,7 @@ var makeValid = function (unschedulable, tasks, task) {
 //Takes a task and either inserts it into the schedule or into unscheduled and returns whether or not is succeeded (where success is putting the task in the schedule)
 var tryInsertWithMovedStart = function (schedule, unscheduled, task) {
 	timePairs = freeTimes(schedule, task.startAfter, task.endBefore);
+	timePairs.sort();
 	while(timePair = timePairs.pop()) {
 		if (timePair[1] - timePair[0] >= task.duration) {
 			task.scheduledStart = timePair[0];
