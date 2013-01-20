@@ -22,8 +22,21 @@ MoustacheBurrito.ItineraryView = Backbone.View.extend({
     });
 
     this.renderTasks(this.tasks);
+    this.renderLabels();
 
     $('.itinerary-wrapper').scroll(this.onScroll.bind(this));
+
+  },
+
+  renderLabels: function() {
+
+    for (var day = this.start; day < this.end; day += MoustacheBurrito.time.days(1)) {
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var date = MoustacheBurrito.time.toDate(day);
+      var $label = $("<div class='day-label'>" + months[date.getMonth()] + " " + date.getDate() + "</div>");
+      $label.css({top: this.timeToScrollTop(day)});
+      this.$el.append($label);
+    }
 
   },
 
